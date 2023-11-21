@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -10,7 +10,7 @@
 
 <body>
   <div class="header">
-    <h1>トリマ拡張ツール(自作)</h1>
+    <h1>トリマ拡張ツール（自作）</h1>
   </div>
   <div class="result">
     <h1>残りの獲得可能タンク数：<span id="resultSpan">-</span>本</h1>
@@ -18,6 +18,16 @@
   <div class="input">
     <input placeholder="移動で獲得したマイル数を入力" id="resultValue">
     <h2>マイル</h2>
+  </div>
+  <div class="userRank">
+    ユーザーランクを選択：
+    <select id="userRankSelect">
+      <option value="60">ビギナーランク</option>
+      <option value="60">ブロンズランク</option>
+      <option value="70">シルバーランク</option>
+      <option value="80">ゴールドランク</option>
+      <option value="100">プラチナランク</option>
+    </select>
   </div>
   <div class="numberButton">
     <p>　このボタンを使用しても獲得したマイル数を入力可能。</p>
@@ -42,10 +52,14 @@
       </tr>
     </table>
     <input type="button" value="計算" onclick="get_number(this)" class="calcButton">
+    <div id="errorMessage">
+      <h1 id="errorTitle"></h1>
+      <p id="errorContent"></p>
+    </div>
   </div>
   
   <script src="script.js"></script>
   
 </body>
-  
+
 </html>
